@@ -1,0 +1,213 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+<title>homepage.html</title> 
+
+<meta charset="utf-8"> 
+
+<!--Final Project, Sara Barnett, H02, 10/1/2023--> 
+
+<link rel="stylesheet" href="styling 2.css">
+<style>
+@keyframes example{
+0%{background-color:orange;
+left:0px; top:0px}
+25%{background-color:yellow;
+left:100px; top:0px}
+50%background-color:red;
+right:100px;top:0px}
+}
+
+#animation{width:500px;
+height:300px;
+animation-name:example;
+background-color:red;
+animation-duration:5s;
+animation-delay:3s;}
+</style>
+
+<script>
+
+
+function slideshow(changing){
+document.getElementById("img").src=changing.src
+
+}
+</script>
+
+
+</head>
+<body>
+<header>
+<h1 id="animation">HUNGER GAMES</h1>
+</header>
+<iframe width="500" height="465" src="https://www.youtube.com/embed/mfmrPu43DF8?si=b5BM6qJlw-vfz4BC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+<nav id="navigation">
+<a href="finalproject 2.html">Quiz</a><br>
+<a href="prueba.html">Do you Know the Movies</a>
+</nav>
+
+
+<div>
+<h3>Cast Members</h3>
+<h6>Click on the Images to go to Their Wikipedia Page</h6>
+
+<table id="casting">
+<tr>
+<td>
+<a href="https://en.wikipedia.org/wiki/Jennifer_Lawrence" target="_blank">
+<img src="jen.jpg" alt="jen" width="170" height="170" id="katniss"></a>
+</td>
+
+<td>
+<a href="https://en.wikipedia.org/wiki/Josh_Hutcherson" target="_blank">
+<img src="josh.jpg" alt="josh" width="170" height="170" id="peeta"></a>
+</td>
+
+<td>
+<a href="https://en.wikipedia.org/wiki/Woody_Harrelson" target="_blank"><img src="woody.jpg" alt="w" width="170" height="170" id="haymitch"></a>
+</td>
+
+<td>
+<a href="https://en.wikipedia.org/wiki/Elizabeth_Banks" target="_blank"><img src="banks.jpg" alt="e" width="170" height="170" id="effie"></a>
+</td>
+
+<td>
+<a href="https://en.wikipedia.org/wiki/Liam_Hemsworth" target="_blank"><img src="gale.jpg" alt="ew" width="170" height="170" id="gale"></a>
+</td>
+</tr>
+</table>
+
+</div>
+
+
+<h4>Summary of Movies</h4>
+<p class="paragraphs">There is a country called Penem that, due to a rebellion, hosts The Hunger Games every year. This is where they choose two people from each of their 12 districts and place them in an arena. Whoever survives, wins the Hunger Games and recieves unmeasurable wealth and a new status for their victory. The book The Ballad of Songbirds and Snakes is the backstory of President Snow, who is one of the main villans of the story. It also introduces a new character, Lucy Gray, and overlapping details between Lucy Gray and Katniss Everdeen.</p>
+
+<h4>About the Author</h4>
+<p class="paragraphs">Suzanne Collins is the Author of all 4 books in <em>The Hunger Games</em> series. She was born in Conneticut, U.S. She recieved her education from Indiana University and NYU. She started writing for TV shows, and even was the main writter of <em>Clifford's Puppy Days</em>. While she was writing for shows, she was also working on books. She wrote several childrens books, along with more serious topic like war and genocide. She came across the idea for <em>The Hunger Games</em> by TV surfing and coming across the subject matter of Iraq and the brutal violence of the then current invasion. </p>
+
+<table id="mover">
+<tr><td colspan="4">Click on the pictures to make them larger!</td></tr>
+
+<tr>
+<td>
+<img src="table1.jpg" alt="1" width="150" height="150" onclick="slideshow(this);" id="img1">
+
+<img src="table2.webp" alt="2" width="150" height="150" onclick="slideshow(this);" id="img2">
+
+<img src="table3.jpg" alt="3" width="150" height="150" onclick="slideshow(this);" id="img3">
+
+<img src="table4.png" alt=43" width="150" height="150" onclick="slideshow(this);" id="img4>
+</td>
+</tr>
+
+<tr>
+<td colspan="4">
+<img src="table3.jpg" alt="3" width="600" height="600" onclick="slideshow(this);"  id="img">
+</td>
+</tr>
+</table>
+
+
+<h4>Book and Movie Order</h4>
+<ol>
+<li>The Ballad of Songbirds and Snakes</li>
+<li>The Hunger Games</li>
+<li>Catching Fire</li>
+<li>Mockingjay: Part 1</li>
+<li>Mockingjay: Part 2</li>
+</ol>
+
+
+
+
+<script type="text/javascript">
+
+/*
+Simple Image Trail script- By JavaScriptKit.com
+Visit http://www.javascriptkit.com for this script and more
+This notice must stay intact
+*/
+
+var trailimage=["cursor.gif", 50, 40] //image path, plus width and height
+var offsetfrommouse=[10,-20] //image x,y offsets from cursor position in pixels. Enter 0,0 for no offset
+var displayduration=0 //duration in seconds image should remain visible. 0 for always.
+
+if (document.getElementById || document.all)
+document.write('<div id="trailimageid" style="position:absolute;visibility:visible;left:0px;top:0px;width:1px;height:1px"><img src="'+trailimage[0]+'" border="0" width="'+trailimage[1]+'px" height="'+trailimage[2]+'px"></div>')
+
+function gettrailobj(){
+if (document.getElementById)
+return document.getElementById("trailimageid").style
+else if (document.all)
+return document.all.trailimagid.style
+}
+
+function truebody(){
+return (!window.opera && document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function hidetrail(){
+gettrailobj().visibility="hidden"
+document.onmousemove=""
+
+}
+
+function followmouse(e){
+var xcoord=offsetfrommouse[0]
+var ycoord=offsetfrommouse[1]
+if (typeof e != "undefined"){
+xcoord+=e.pageX
+ycoord+=e.pageY
+}
+else if (typeof window.event !="undefined"){
+xcoord+=truebody().scrollLeft+event.clientX
+ycoord+=truebody().scrollTop+event.clientY
+}
+var docwidth=document.all? truebody().scrollLeft+truebody().clientWidth : pageXOffset+window.innerWidth-15
+var docheight=document.all? Math.max(truebody().scrollHeight, truebody().clientHeight) : Math.max(document.body.offsetHeight, window.innerHeight)
+if (xcoord+trailimage[1]+3>docwidth || ycoord+trailimage[2]> docheight)
+gettrailobj().display="none"
+else 
+gettrailobj().display=""
+gettrailobj().left=xcoord+"px"
+gettrailobj().top=ycoord+"px"
+}
+
+document.onmousemove=followmouse
+
+if (displayduration>0)
+setTimeout("hidetrail()", displayduration*1000)
+
+</script>
+
+
+
+
+<h4><em>Citations</em></h4>
+<footer>
+Free Javascript: <a href="http://www.javascriptkit.com/script/script2/simpleimagetrail.shtml">http://www.javascriptkit.com/script/script2/simpleimagetrail.shtml</a><br>
+Cannon Sound: <a href="https://www.myinstants.com/en/instant/hunger-game-cannon-78779/">https://www.myinstants.com/en/instant/hunger-game-cannon-78779/</a><br>
+Whistle sound: <a href="https://quicksounds.com/sound/244/hunger-game-whistle">https://quicksounds.com/sound/244/hunger-game-whistle</a><br>
+Bow and Arrow GIF:<a href="https://commons.wikimedia.org/wiki/File:Bow-and-arrow.gif">https://commons.wikimedia.org/wiki/File:Bow-and-arrow.gif</a><br>
+Research: <a href="https://www.britannica.com/biography/Suzanne-Collins">https://www.britannica.com/biography/Suzanne-Collins</a><br><a href="https://www.nytimes.com/2018/10/18/books/suzanne-collins-talks-about-the-hunger-games-the-books-and-the-movies.html">https://www.nytimes.com/2018/10/18/books/suzanne-collins-talks-about-the-hunger-games-the-books-and-the-movies.html</a><a href="https://www.suzannecollinsbooks.com/the_hunger_games_69765.htm">https://www.suzannecollinsbooks.com/the_hunger_games_69765.htm</a><br>
+Images:<br>
+<a href="https://www.imdb.com/title/tt1392170/">https://www.imdb.com/title/tt1392170/</a><br>
+<a href="https://thehungergames.fandom.com/wiki/The_Hunger_Games:_The_Ballad_of_Songbirds_%26_Snakes">https://thehungergames.fandom.com/wiki/The_Hunger_Games:_The_Ballad_of_Songbirds_%26_Snakes</a><br><a href="https://en.wikipedia.org/wiki/The_Starving_Games">https://en.wikipedia.org/wiki/The_Starving_Games</a><br>
+<a href="https://www.polygon.com/23630908/hunger-games-order-watch-movies">https://www.polygon.com/23630908/hunger-games-order-watch-movies</a>
+
+
+
+</footer>
+
+
+<a href="zoomvideo.mp4">zoom video</a>
+
+</body>
+</html>

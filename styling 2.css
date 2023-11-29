@@ -1,0 +1,49 @@
+body{background-color:black;
+color:white}
+
+h1{text-align:center;
+font-size:35pt;
+color:white;
+text-shadow:4px 4px red;}
+
+
+#navigation{text-align:left;}
+
+table tr td{border:solid white 2px;
+border-collapse:collapse}
+
+header{background-color:grey;
+border:ridge black 9px;}
+
+iframe{
+padding:50px;
+text-align:center;
+}
+
+div{position:absolute;
+left:700px;
+top:180px;
+border:solid 5px white;}
+
+h3{text-align:center}
+
+.paragraphs{
+width:500px;
+columns:100px 2;
+column-rule:2px solid white;
+text-align:justify;}
+
+#mover{
+position:absolute;
+left:800px;
+top:600px}
+
+footer{background-color:gray;
+border:solid 4px white}
+
+.centering{
+display:block
+margin-left:auto;
+margin-right:auto}
+
+

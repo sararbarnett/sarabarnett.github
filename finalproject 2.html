@@ -1,0 +1,266 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+<title>FinalProject.html</title> 
+
+<meta charset="utf-8"> 
+
+<!--Final Project, Sara Barnett, H02, 10/1/2023--> 
+
+
+<style> 
+
+body{background-color:silver; 
+
+text-align:center; 
+
+
+
+} 
+
+table{
+border:3px solid;}
+
+#button1{
+background-color:black;
+Color:white;
+Cursor:pointer;
+font-size:30px;
+}
+#heads{background-color:grey}
+
+table{
+border:3px solid;}
+</style> 
+<link rel="stylesheet" href="styling 2.css">
+
+
+<script> 
+let text="";
+for(let k=4;k>0;k--){
+alert("Game will start in--->"  + k)
+}
+
+function starting(){
+document.getElementById("titlename").innerHTML="Questions:";
+document.getElementById("pic1").src="collage.jpg";
+document.getElementById("button1").style.display="none";
+}
+var totalpoints=0
+function change(){ 
+
+if(document.formpainting.preguntas[0].checked)
+{totalpoints=totalpoints+3}
+
+if(document.formpainting.preguntas[1].checked)
+{totalpoints=totalpoints+1}
+
+if(document.formpainting.preguntas[2].checked)
+{totalpoints=totalpoints+2}}
+
+function slideover(){
+if(document.formband.moves[0].checked) 
+{totalpoints=totalpoints+1}
+
+if(document.formband.moves[1].checked) 
+{totalpoints=totalpoints+3}
+
+if(document.formband.moves[2].checked) 
+{totalpoints=totalpoints+2}}
+
+function snow(){
+if(document.hunger3.question3[0].checked)
+{totalpoints=totalpoints+3}
+
+if(document.hunger3.question3[1].checked)
+{totalpoints=totalpoints+1}
+
+if(document.hunger3.question3[2].checked)
+{totalpoints=totalpoints+2}
+
+}
+
+function snowy(){
+if(document.hunger4.question4[0].checked)
+{totalpoints=totalpoints+3}
+
+if(document.hunger4.question4[1].checked)
+{totalpoints=totalpoints+2}
+
+if(document.hunger4.question4[2].checked)
+{totalpoints=totalpoints+1}
+
+}
+
+function announce(){
+if (totalpoints<9)
+{alert("You lost!");
+document.body.style.backgroundColor="red"}
+else 
+{alert("You won the Hunger Games!");
+document.body.style.backgroundColor="green"}}
+
+
+
+
+</script> 
+
+</head> 
+<body>  
+<header id="heads">
+<h1 id="titlename">Would you survive the Hunger Games?</h1> 
+</header>
+
+<a href="homepage 2.html">Back</a>
+<br>
+<a href="prueba.html">Do you Know the Movies</a>
+<p> 
+
+<img src="hungerg.jpg" alt="pic" width="500" height="500" id="pic1"> 
+<br>
+<input type="button" value="Start" onclick="starting()" id="button1">
+</p> 
+
+
+<h2>Question 1: Choose a skill:</h2>
+<p id="quiz">
+<form name="formpainting">
+<br>
+<input type="radio" name="preguntas" onclick="change()"> Archery
+
+
+<input type="radio" name="preguntas" onclick="change()"> Painting
+
+
+<input type="radio" name="preguntas" onclick="change()"> Intelligence
+
+
+</form>
+</p>
+
+<h2>Question 2: What do you do once the cannon goes off?</h2>
+<img src="cornicopia.jpg" alt="cornicopia" width="500" height="500">
+<form name="formband" id="quiz2">
+<br>
+<input type="radio" name="moves" onclick="slideover();"> Fight people at the cornicopia
+
+
+<input type="radio" name="moves" onclick="slideover();"> Run into the woods
+
+
+<input type="radio" name="moves" onclick="slideover();"> Grab supplies
+
+</form>
+
+<h2>Question 3: Who is your ally?</h2>
+<img src="collage2.jpg" alt="collage" width="500" height="500">
+
+<form name="hunger3" id="quiz3">
+<br>
+<input type="radio" name="question3" onclick="snow();"> Peeta
+
+
+<input type="radio" name="question3" onclick="snow();"> Cato
+
+<input type="radio" name="question3" onclick="snow();"> Foxface
+
+</form>
+<br>
+<h2>Question 4: What distict are you from?</h2>
+<img src="collage3.jpg" alt="collage" width="500" height="500">
+<form name="hunger4" id="quiz4">
+<br>
+<input type="radio" name="question4" onclick="snowy();"> District 2
+
+
+<input type="radio" name="question4" onclick="snowy();"> District 5
+
+<input type="radio" name="question4" onclick="snowy();"> District 11
+
+</form>
+
+<br>
+
+<input type="button" value="score" onclick="announce();">
+
+<script type="text/javascript">
+
+/*
+Simple Image Trail script- By JavaScriptKit.com
+Visit http://www.javascriptkit.com for this script and more
+This notice must stay intact
+*/
+
+var trailimage=["cursor.gif", 50, 40] //image path, plus width and height
+var offsetfrommouse=[10,-20] //image x,y offsets from cursor position in pixels. Enter 0,0 for no offset
+var displayduration=0 //duration in seconds image should remain visible. 0 for always.
+
+if (document.getElementById || document.all)
+document.write('<div id="trailimageid" style="position:absolute;visibility:visible;left:0px;top:0px;width:1px;height:1px"><img src="'+trailimage[0]+'" border="0" width="'+trailimage[1]+'px" height="'+trailimage[2]+'px"></div>')
+
+function gettrailobj(){
+if (document.getElementById)
+return document.getElementById("trailimageid").style
+else if (document.all)
+return document.all.trailimagid.style
+}
+
+function truebody(){
+return (!window.opera && document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function hidetrail(){
+gettrailobj().visibility="hidden"
+document.onmousemove=""
+
+}
+
+function followmouse(e){
+var xcoord=offsetfrommouse[0]
+var ycoord=offsetfrommouse[1]
+if (typeof e != "undefined"){
+xcoord+=e.pageX
+ycoord+=e.pageY
+}
+else if (typeof window.event !="undefined"){
+xcoord+=truebody().scrollLeft+event.clientX
+ycoord+=truebody().scrollTop+event.clientY
+}
+var docwidth=document.all? truebody().scrollLeft+truebody().clientWidth : pageXOffset+window.innerWidth-15
+var docheight=document.all? Math.max(truebody().scrollHeight, truebody().clientHeight) : Math.max(document.body.offsetHeight, window.innerHeight)
+if (xcoord+trailimage[1]+3>docwidth || ycoord+trailimage[2]> docheight)
+gettrailobj().display="none"
+else 
+gettrailobj().display=""
+gettrailobj().left=xcoord+"px"
+gettrailobj().top=ycoord+"px"
+}
+
+document.onmousemove=followmouse
+
+if (displayduration>0)
+setTimeout("hidetrail()", displayduration*1000)
+
+</script>
+
+<p align="left">This free script provided by<br />
+<a href="http://javascriptkit.com">JavaScript Kit</a></p>
+
+
+</table>
+
+</body> 
+
+</html> 
+
+
+
+
+
+
+
+
+
